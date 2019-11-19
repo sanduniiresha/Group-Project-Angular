@@ -1,0 +1,49 @@
+
+
+<div style= "text-align:center">
+  
+
+<app-header></app-header>
+
+
+
+<!-- Make an Appointment -->
+<div class="col-lg-4 contact_col">
+    <div class="info_form_container">
+        <div class="info_form_title" >Make an Appointment</div>
+        <form action="#" class="info_form" id="info_form">
+            <select name="info_form_dep" id="info_form_dep" class="info_form_dep info_input info_select">
+                <option>Department</option>
+                <option>Department</option>
+                <option>Department</option>
+            </select>
+            <select name="info_form_doc" id="info_form_doc" class="info_form_doc info_input info_select">
+                <option>Doctor</option>
+                <option>Doctor</option>
+                <option>Doctor</option>
+            </select>
+            <input type="text" class="info_input" placeholder="Name" required="required">
+            <input type="text" class="info_input" placeholder="Phone No">
+            <button class="info_form_button">make an appointment</button>
+        </form>
+    </div>
+</div>
+<!--end of Make an Appointment -->
+
+  <div class = "container">
+    <div class = "raw">
+      <div class = "col-md-12">
+          <app-home *ngIf="homeScrean"></app-home>
+          <app-aboutus *ngIf="AboutScrean"></app-aboutus>
+        <app-services *ngIf="ServicesScrean"></app-services>
+        <app-contactus *ngIf="ContactScrean"></app-contactus> 
+        <app-departments *ngIf="DepScrean"></app-departments>
+        <app-doctors  *ngIf="DoctorScrean"></app-doctors>
+        
+        </div>
+    </div>
+  </div>
+
+<router-outlet></router-outlet>
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<div class = "container">
+
+        <div class= "navbar-header">
+ <link href ="css/basic-template.css" rel= "Stylesheet" />
+
+    
+<!--navigation bar start-->
+
+
+    <nav class = "navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class= "navbar-nav">
+
+        <a class="navbar-brand" href="#" style="max-width: 8%;">
+            <img src= "../assets/images/Picture2.png " class="img-fluid">
+         </a>
+
+
+            <li class= "nav-item">
+                <button class= "m-1 btn btn-light btn-outline-primary" Button
+                 label= "HomeScrean"
+                 (click)= "HomeScrean= true; AboutScrean= false; DepScrean =false; ContactScrean= false; DoctorScrean= false; ServiceScrean= false; ">
+                Home
+            </button>
+            
+            </li>
+
+    <li class= "nav-item">
+        <button class= "m-1 btn btn-light btn-outline-primary" Button
+         label= "AboutScrean"
+         (click)= "AboutScrean= true; HomeScrean= false; DepScrean =false; ContactScrean= false; DoctorScrean= false; ServiceScrean= false; " >
+         About us
+    </button>
+    </li>
+    <li class= "nav-item">
+            <button class= "m-1 btn btn-light btn-outline-primary" Button
+             label= "ContactScrean" 
+             (click)= "ContactScrean= true; HomeScrean= false; ServiceScrean =false; AboutScrean= false; DoctorScrean= false; DepScrean= false; "  >
+             Contact Us
+        </button>
+        </li>
+        <li class= "nav-item">
+                <button class= "m-1 btn btn-light btn-outline-primary" Button
+                 label= "DoctorScrean" 
+                 (click)= "DoctorScrean= true; HomeScrean= false; AboutScrean =false; ContactScrean= false; ServiceScrean= false; DepScrean= false; "  >
+                 Doctors
+            </button>
+            </li>
+            <li class= "nav-item">
+                    <button class= "m-1 btn btn-light btn-outline-primary" Button
+                     label= "ServiceScrean" 
+                     (click)= "ServiceScrean= true; HomeScrean= false; AboutScrean =false; ContactScrean= false; DoctorScrean= false; DepScrean= false; "  >
+                     Services
+                </button>
+                </li>
+                <li class= "nav-item">
+                        <button class= "m-1 btn btn-light btn-outline-primary" Button
+                         label= "DepScrean" 
+                         (click)= "DepScrean= true; HomeScrean= false; AboutScrean =false; ContactScrean= false; DoctorScrean= false; ServiceScrean= false; "  >
+                         Departments
+                    </button>
+                    </li>
+</ul>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" class="btn btn-info btn-sm" data-toggle="dropdown">Log In
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">create account</a></li>
+      
+      <li><a href="#">sign in</a></li>
+    </ul>
+
+  </div>
+
+
+</nav>
+</div>
+<!--navigation bar end-->
+
+<app-departments *ngIf="DepScrean"></app-departments>
+<app-aboutus *ngIf="AboutScrean"></app-aboutus>
+<app-services *ngIf="ServiceScrean"></app-services>
+<app-contactus *ngIf="ContactScrean"></app-contactus> 
+<app-doctors *ngIf="DoctorScrean"></app-doctors>
+<app-home *ngIf="homeScrean"></app-home>
+</div>
+
+
+</html>
